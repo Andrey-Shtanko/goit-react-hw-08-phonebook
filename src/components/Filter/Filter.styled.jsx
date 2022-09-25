@@ -6,4 +6,5 @@ export const FilterField = styled.div`
 export const FilterLabel = styled.label`
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 `;
