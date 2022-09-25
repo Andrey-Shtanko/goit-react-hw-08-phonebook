@@ -2,10 +2,10 @@ import { List, ListItem } from './ContsctList.styled';
 export const ContactList = ({ contacts }) => {
   return (
     <List>
-      {contacts.map(({ id, name, tel }) => {
+      {contacts.map(({ id, name, number }) => {
         return (
           <ListItem key={id}>
-            {name}: {tel}
+            {name}: {number}
           </ListItem>
         );
       })}
