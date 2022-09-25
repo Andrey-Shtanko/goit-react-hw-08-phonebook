@@ -16,6 +16,7 @@ export class App extends Component {
     const contact = {
       id: nanoid(),
       name: event.target[0].value,
+      tel: event.target[1].value,
     };
 
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
@@ -24,6 +25,7 @@ export class App extends Component {
 
   inputReset = event => {
     event.target[0].value = ``;
+    event.target[1].value = ``;
   };
 
   render() {
