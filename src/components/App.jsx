@@ -23,7 +23,12 @@ export class App extends Component {
       name: event.target[0].value,
       number: event.target[1].value,
     };
-
+    const names = this.state.contacts.map(({ name }) =>
+      name.toLocaleLowerCase()
+    );
+    if (names.includes(event.target[0].value.toLocaleLowerCase())) {
+      return alert(`${event.target[0].value} is already in contacts`);
+    }
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
     this.inputReset(event);
   };
