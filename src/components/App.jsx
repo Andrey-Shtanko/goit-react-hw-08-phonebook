@@ -16,27 +16,21 @@ export class App extends Component {
     filter: '',
   };
 
-  addContact = event => {
-    event.preventDefault();
+  formSubmitHandler = formData => {
     const contact = {
       id: nanoid(),
-      name: event.target[0].value,
-      number: event.target[1].value,
+      name: formData.name,
+      number: formData.number,
     };
     const names = this.state.contacts.map(({ name }) =>
       name.toLocaleLowerCase()
     );
-    if (names.includes(event.target[0].value.toLocaleLowerCase())) {
-      return alert(`${event.target[0].value} is already in contacts`);
+    if (names.includes(formData.name.toLocaleLowerCase())) {
+      return alert(`${formData.name} is already in contacts`);
     }
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
-    this.inputReset(event);
   };
 
-  inputReset = event => {
-    event.target[0].value = ``;
-    event.target[1].value = ``;
-  };
   changeFilter = event => {
     this.setState({ filter: event.currentTarget.value });
   };
@@ -59,7 +53,7 @@ export class App extends Component {
     return (
       <Container>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.addContact} />
+        <ContactForm onSubmit={this.formSubmitHandler} />
         <h2>Contacts</h2>
         <Filter onChange={this.changeFilter} />
         {this.state.contacts.length !== 0 && (
