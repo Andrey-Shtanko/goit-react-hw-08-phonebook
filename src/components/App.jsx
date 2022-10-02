@@ -22,12 +22,15 @@ export class App extends Component {
       name: formData.name,
       number: formData.number,
     };
-    const names = this.state.contacts.map(({ name }) =>
-      name.toLocaleLowerCase()
-    );
-    if (names.includes(formData.name.toLocaleLowerCase())) {
+
+    if (
+      this.state.contacts
+        .map(({ name }) => name.toLocaleLowerCase())
+        .some(name => name === formData.name.toLocaleLowerCase())
+    ) {
       return alert(`${formData.name} is already in contacts`);
     }
+
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
   };
 
