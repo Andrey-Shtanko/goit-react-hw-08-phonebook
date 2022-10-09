@@ -6,20 +6,14 @@ import { nanoid } from 'nanoid';
 import { Container } from './App.styled';
 
 export const App = () => {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem('contacts')) ?? []
+  );
   const [filter, setFilter] = useState('');
 
-  // componentDidMount() {
-  //   const contacts = JSON.parse(localStorage.getItem('contacts'));
-  //   if (contacts) {
-  //     this.setState({ contacts: contacts });
-  //   }
-  // }
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.contacts !== prevState.contacts) {
-  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-  //   }
-  // }
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+  }, [contacts]);
 
   const formSubmitHandler = (userName, number) => {
     const contact = {
