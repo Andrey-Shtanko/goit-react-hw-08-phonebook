@@ -6,7 +6,17 @@ export const ContactForm = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   const handleChange = event => {
-    setName(event.currentTarget.value);
+    switch (event.currentTarget.name) {
+      case 'name':
+        setName(event.currentTarget.value);
+        break;
+      case 'number':
+        setNumber(event.currentTarget.value);
+        break;
+
+      default:
+        break;
+    }
   };
 
   const handleSubmit = event => {
