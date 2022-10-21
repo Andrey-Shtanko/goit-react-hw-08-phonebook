@@ -12,43 +12,11 @@ import { useSelector, useDispatch } from 'react-redux';
 export const App = () => {
  
   const dispatch = useDispatch()
-  const contacts = useSelector(state => state.contacts)
+  const contacts = useSelector(state => state.contacts.contacts)
 
   const filter = useSelector(state => state.filter)
   
-  // const [contacts, setContacts] = useState(
-  //   JSON.parse(localStorage.getItem('contacts')) ?? []
-  // );
-  // const [filter, setFilter] = useState('');
-
-  // useEffect(() => {
-  //   localStorage.setItem('contacts', JSON.stringify(contacts));
-  // }, [contacts]);
-
-  // const formSubmitHandler = (userName, number) => {
-  //   const contact = {
-  //     id: nanoid(),
-  //     name: userName,
-  //     number: number,
-  //   };
-
-  //   if (
-  //     contacts
-  //       .map(({ name }) => name.toLocaleLowerCase())
-  //       .some(name => name === userName.toLocaleLowerCase())
-  //   ) {
-  //     return alert(`${userName} is already in contacts`);
-  //   }
-
-  //   setContacts(prevState => [contact, ...prevState]);
-  // };
-
-  // const changeFilter = event => {
-  //   // console.log(event.currentTarget.value);
-  //   dispatch(filteredContact(event.currentTarget.value))
-
-  //   // setFilter(event.currentTarget.value);
-  // };
+  
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
 
@@ -59,9 +27,7 @@ export const App = () => {
 
   const deleteContactById = contactId => {
     dispatch(deleteContact(contactId))
-    // setContacts(prevState =>
-    //   prevState.filter(contact => contact.id !== contactId)
-    // );
+    
   };
 
   const visibleContacts = getVisibleContacts();
