@@ -5,10 +5,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = []
 
 const contactsSlice = createSlice({
-    name: 'ccontacts',
+    name: 'contacts',
     initialState,
     reducers: {
-        addContacts: {
+        addContact: {
             reducer(state, action)  {
             state.push(action.payload)
             },
@@ -32,5 +32,5 @@ const contactsSlice = createSlice({
         
     }
 })
-export const { addContacts, deleteContact } = contactsSlice.actions;
+export const { addContact, deleteContact } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
