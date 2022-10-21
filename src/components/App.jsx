@@ -3,16 +3,19 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContsctList';
 import { deleteContact } from 'Redux/contactsSlice';
+
 import { Container } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
 
 
 
 export const App = () => {
+ 
   const dispatch = useDispatch()
   const contacts = useSelector(state => state.contacts)
-  console.log(contacts);
-  const filter = useSelector( state => state.filter)
+
+  const filter = useSelector(state => state.filter)
+  
   // const [contacts, setContacts] = useState(
   //   JSON.parse(localStorage.getItem('contacts')) ?? []
   // );
@@ -41,7 +44,10 @@ export const App = () => {
   // };
 
   // const changeFilter = event => {
-  //   setFilter(event.currentTarget.value);
+  //   // console.log(event.currentTarget.value);
+  //   dispatch(filteredContact(event.currentTarget.value))
+
+  //   // setFilter(event.currentTarget.value);
   // };
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
@@ -64,7 +70,7 @@ export const App = () => {
       <h1>Phonebook</h1>
       <ContactForm  />
       <h2>Contacts</h2>
-      <Filter  />
+      <Filter />
       {contacts.length !== 0 && (
         <ContactList contacts={visibleContacts} onDelete={ deleteContactById} />
       )}
