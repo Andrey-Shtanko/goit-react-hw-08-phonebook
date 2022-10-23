@@ -1,15 +1,18 @@
 import { FilterField, FilterLabel } from './Filter.styled';
 import { useDispatch } from 'react-redux';
-import { filteredContact  } from 'Redux/filterSlice';
+import { filteredContact } from 'Redux/contactsSlice';
 export const Filter = () => {
-  const dispatch = useDispatch()
- 
+  const dispatch = useDispatch();
 
   return (
     <FilterField>
       <FilterLabel>
         Find contacts by name
-        <input type="text" name="filter" onChange={(event) => dispatch(filteredContact(event.target.value)) } />
+        <input
+          type="text"
+          name="filter"
+          onChange={event => dispatch(filteredContact(event.target.value))}
+        />
       </FilterLabel>
     </FilterField>
   );
