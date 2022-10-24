@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.stateRedux.contacts);
+  const contacts = useSelector(state => state.stateRedux.contacts.items);
 
   const filter = useSelector(state => state.stateRedux.filter);
 
@@ -23,11 +23,11 @@ export const ContactList = () => {
   const visibleContacts = getVisibleContacts();
   return (
     <List>
-      {visibleContacts.map(({ id, name, number }) => {
+      {visibleContacts.map(({ id, name, phone }) => {
         return (
           <ListItem key={id}>
             <Contact>
-              {name}: {number}
+              {name} : {phone}
             </Contact>
 
             <button onClick={() => deleteContactById(id)}>Delete</button>

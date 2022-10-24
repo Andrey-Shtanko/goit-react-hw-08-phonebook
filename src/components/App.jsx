@@ -3,10 +3,17 @@ import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContsctList';
 
 import { Container } from './App.styled';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchContacts } from './../Redux/operations';
 
 export const App = () => {
+  const dispatch = useDispatch();
   const contacts = useSelector(state => state.stateRedux.contacts);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <Container>
