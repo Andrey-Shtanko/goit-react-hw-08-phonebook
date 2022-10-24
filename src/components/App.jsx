@@ -10,6 +10,8 @@ import { fetchContacts } from './../Redux/operations';
 export const App = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.stateRedux.contacts);
+  const isLoading = useSelector(state => state.stateRedux.contacts.isLoading);
+  const error = useSelector(state => state.stateRedux.contacts.error);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -21,6 +23,7 @@ export const App = () => {
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
+      {isLoading && !error && <b>Waiting for contacts...</b>}
       {contacts.length !== 0 && <ContactList />}
     </Container>
   );

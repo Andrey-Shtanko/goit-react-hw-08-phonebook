@@ -1,10 +1,12 @@
 import { List, ListItem, Contact } from './ContsctList.styled';
-import { deleteContact } from 'Redux/contactsSlice';
+
 import { useDispatch, useSelector } from 'react-redux';
+import { deleteContact } from './../../Redux/operations';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.stateRedux.contacts.items);
+  const isLoading = useSelector(state => state.stateRedux.contacts.isLoading);
 
   const filter = useSelector(state => state.stateRedux.filter);
 
@@ -30,7 +32,9 @@ export const ContactList = () => {
               {name} : {phone}
             </Contact>
 
-            <button onClick={() => deleteContactById(id)}>Delete</button>
+            <button onClick={() => deleteContactById(id)} disabled={isLoading}>
+              Delete
+            </button>
           </ListItem>
         );
       })}
