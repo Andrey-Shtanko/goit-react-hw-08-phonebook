@@ -6,10 +6,11 @@ import { Container } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from './../Redux/operations';
+import { selectContacts } from 'Redux/selectors';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.stateRedux.contacts);
+  const contacts = useSelector(selectContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());
