@@ -6,11 +6,12 @@ import { Container } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from './../Redux/operations';
-import { selectContacts } from 'Redux/selectors';
+
+import { getIsContactExist } from './../Redux/selectors';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
+  const contacts = useSelector(getIsContactExist);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -23,7 +24,7 @@ export const App = () => {
       <h2>Contacts</h2>
       <Filter />
       <Loading />
-      {contacts.length !== 0 && <ContactList />}
+      {contacts && <ContactList />}
     </Container>
   );
 };
