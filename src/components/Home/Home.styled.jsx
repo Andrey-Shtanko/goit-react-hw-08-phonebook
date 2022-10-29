@@ -10,5 +10,5 @@ export const HomeTitle = styled.h2`
   font-size: 48px;
   font-weight: 700;
   line-height: normal;
-  width: 70vw;
+  width: 75vw;
 `;

@@ -3,7 +3,7 @@ export const Home = () => {
   return (
     <HomeBox>
       <HomeTitle>
-        It's best app for storage your Contacts! Let's start!
+        It's the best app for storage your CONTACTS <br /> Let's start!
       </HomeTitle>
     </HomeBox>
   );
