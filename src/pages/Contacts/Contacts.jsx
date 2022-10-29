@@ -7,8 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 // import { fetchContacts } from './../Redux/operations';
 
-import { getIsContactExist } from './../../Redux/selectors';
-import { fetchContacts } from './../../Redux/operations';
+import { getIsContactExist } from './../../Redux/contacts/selectors';
+import { fetchContacts } from './../../Redux/contacts/operations';
 import { Container } from './../../components/App.styled';
 import { ContactForm } from './../../components/ContactForm/ContactForm';
 import { Filter } from './../../components/Filter/Filter';

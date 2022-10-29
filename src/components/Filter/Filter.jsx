@@ -1,6 +1,6 @@
 import { FilterField, FilterLabel } from './Filter.styled';
 import { useDispatch } from 'react-redux';
-import { filteredContact } from 'Redux/contactsSlice';
+import { filteredContact } from 'Redux/contacts/contactsSlice';
 import { useState } from 'react';
 export const Filter = () => {
   const [filterValue, setFilterValue] = useState('');

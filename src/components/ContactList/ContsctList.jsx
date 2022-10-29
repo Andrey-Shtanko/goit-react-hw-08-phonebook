@@ -1,8 +1,11 @@
 import { List, ListItem, Contact, ContactName } from './ContsctList.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from './../../Redux/operations';
-import { selectIsLoading, selectVisibleontacts } from 'Redux/selectors';
+import { deleteContact } from './../../Redux/contacts/operations';
+import {
+  selectIsLoading,
+  selectVisibleontacts,
+} from 'Redux/contacts/selectors';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
