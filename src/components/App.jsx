@@ -1,13 +1,6 @@
-// import { ContactForm } from './ContactForm/ContactForm';
-// import { Filter } from './Filter/Filter';
-// import { ContactList } from './ContactList/ContsctList';
-// import { Loading } from './Loading/Loading';
-// import { Container } from './App.styled';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-// import { fetchContacts } from './../Redux/operations';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
-// import { getIsContactExist } from './../Redux/selectors';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 import { HomePage } from 'pages/Home/Home';
@@ -16,16 +9,21 @@ import { LoginPage } from './../pages/Login/Login';
 import { ContactsPage } from './../pages/Contacts/Contacts';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { selectIsRefreshing } from './../Redux/auth/authSelectors';
+import { refreshUser } from 'Redux/auth/authOperations';
+import { Loading } from './Loading/Loading';
 
 export const App = () => {
-  // const dispatch = useDispatch();
-  // const contacts = useSelector(getIsContactExist);
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
 
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <Loading />
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
@@ -52,13 +50,5 @@ export const App = () => {
         />
       </Route>
     </Routes>
-    // <Container>
-    //   <h1>Phonebook</h1>
-    //   <ContactForm />
-    //   <h2>Contacts</h2>
-    //   <Filter />
-    //   <Loading />
-    //   {contacts && <ContactList />}
-    // </Container>
   );
 };
