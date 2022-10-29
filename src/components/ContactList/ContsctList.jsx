@@ -25,12 +25,12 @@ export const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleontacts);
   return (
     <List>
-      {visibleContacts.map(({ id, name, phone }) => {
+      {visibleContacts.map(({ id, name, number }) => {
         return (
           <ListItem key={id}>
             <Contact>
               <ContactName>{name}:</ContactName>
-              <span>{phone}</span>
+              <span>{number}</span>
             </Contact>
 
             <DeleteButton

@@ -47,33 +47,35 @@ export const ContactForm = () => {
     setPhone('');
   };
   return (
-    <Form onSubmit={handleSubmit}>
-      <Label>
-        Name
-        <input
-          onChange={handleChange}
-          type="text"
-          name="name"
-          value={contactName}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        />
-      </Label>
-      <Label>
-        Number
-        <input
-          onChange={handleChange}
-          type="tel"
-          name="number"
-          value={phone}
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        />
-      </Label>
+    <>
+      <Form onSubmit={handleSubmit}>
+        <Label>
+          Name
+          <input
+            onChange={handleChange}
+            type="text"
+            name="name"
+            value={contactName}
+            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            required
+          />
+        </Label>
+        <Label>
+          Number
+          <input
+            onChange={handleChange}
+            type="tel"
+            name="number"
+            value={phone}
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+          />
+        </Label>
 
-      <AddButton type="submit">Add contact</AddButton>
-    </Form>
+        <AddButton type="submit">Add contact</AddButton>
+      </Form>
+    </>
   );
 };
