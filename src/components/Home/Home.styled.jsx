@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-export const LoginBox = styled.div`
-  padding-top: 20px;
+export const HomeBox = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 48px;
+  font-weight: 700;
 `;

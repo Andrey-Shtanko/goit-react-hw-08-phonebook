@@ -1,3 +1,9 @@
+import { LoginForm } from './../../components/LoginForm/LoginForm';
+import { LoginBox } from './Login.styled';
 export const LoginPage = () => {
-  return <div> LOGIN PAGE</div>;
+  return (
+    <LoginBox>
+      <LoginForm />
+    </LoginBox>
+  );
 };

@@ -1,9 +1,9 @@
-import { UserMenuLinks } from './UserMenu.styled';
+import { LogoutBtn, UserMenuLinks } from './UserMenu.styled';
 export const UserMenu = () => {
   return (
     <UserMenuLinks>
       <p>mango@mail.com</p>
-      <button>Logout</button>
+      <LogoutBtn>Logout</LogoutBtn>
     </UserMenuLinks>
   );
 };
