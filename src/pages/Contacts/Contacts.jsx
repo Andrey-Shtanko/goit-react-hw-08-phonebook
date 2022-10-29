@@ -15,7 +15,7 @@ import { Filter } from './../../components/Filter/Filter';
 import { Loading } from './../../components/Loading/Loading';
 import { ContactList } from './../../components/ContactList/ContsctList';
 
-export const ContactsPage = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getIsContactExist);
 
@@ -33,3 +33,5 @@ export const ContactsPage = () => {
     </Container>
   );
 };
+
+export default ContactsPage;
