@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
-
-export const Container = styled.div`
+export const RegistrationBox = styled.div`
+  padding-top: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-left: 50px;
 `;
