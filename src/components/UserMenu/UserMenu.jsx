@@ -1,4 +1,4 @@
-import { LogoutBtn, UserMenuLinks } from './UserMenu.styled';
+import { LogoutBtn, UserMenuLinks, User } from './UserMenu.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUser } from 'Redux/auth/authSelectors';
 import { logOut } from './../../Redux/auth/authOperations';
@@ -10,7 +10,7 @@ export const UserMenu = () => {
   };
   return (
     <UserMenuLinks>
-      <p>{user.email ? user.email : `hello`}</p>
+      <User>{user.email}</User>
       <LogoutBtn onClick={() => handleLogout()}>Logout</LogoutBtn>
     </UserMenuLinks>
   );

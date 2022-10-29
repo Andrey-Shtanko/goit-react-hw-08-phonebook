@@ -1,4 +1,10 @@
-import { List, ListItem, Contact, ContactName } from './ContsctList.styled';
+import {
+  List,
+  ListItem,
+  Contact,
+  ContactName,
+  DeleteButton,
+} from './ContsctList.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from './../../Redux/contacts/operations';
@@ -27,9 +33,12 @@ export const ContactList = () => {
               <span>{phone}</span>
             </Contact>
 
-            <button onClick={() => deleteContactById(id)} disabled={isLoading}>
+            <DeleteButton
+              onClick={() => deleteContactById(id)}
+              disabled={isLoading}
+            >
               Delete
-            </button>
+            </DeleteButton>
           </ListItem>
         );
       })}

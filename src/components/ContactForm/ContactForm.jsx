@@ -1,4 +1,4 @@
-import { Form, Label } from './ContactForm.styled';
+import { Form, Label, AddButton } from './ContactForm.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'Redux/contacts/operations';
@@ -73,7 +73,7 @@ export const ContactForm = () => {
         />
       </Label>
 
-      <button type="submit">Add contact</button>
+      <AddButton type="submit">Add contact</AddButton>
     </Form>
   );
 };

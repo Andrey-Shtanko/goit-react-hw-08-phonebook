@@ -1,4 +1,4 @@
-import { Form, Label } from './../ContactForm/ContactForm.styled';
+import { Form, Label, AddButton } from './../ContactForm/ContactForm.styled';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from './../../Redux/auth/authOperations';
@@ -68,7 +68,7 @@ export const RegistrationForm = () => {
         />
       </Label>
 
-      <button type="submit">Sign In</button>
+      <AddButton type="submit">Sign In</AddButton>
     </Form>
   );
 };
