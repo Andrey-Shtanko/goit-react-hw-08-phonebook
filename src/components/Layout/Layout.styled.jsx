@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import background from '../Images/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.png';
+import background from '../../Images/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.png';
 
 export const LayoutStyled = styled.div`
   display: flex;
