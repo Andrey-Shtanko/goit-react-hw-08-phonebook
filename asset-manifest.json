@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.81afd36a.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.27e900e4.js",
     "static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.png": "/goit-react-hw-08-phonebook/static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.70eb8bbf28cb87b459f5.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.81afd36a.js.map": "/goit-react-hw-08-phonebook/static/js/main.81afd36a.js.map"
+    "main.27e900e4.js.map": "/goit-react-hw-08-phonebook/static/js/main.27e900e4.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.81afd36a.js"
+    "static/js/main.27e900e4.js"
   ]
 }
