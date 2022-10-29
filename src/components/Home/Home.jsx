@@ -1,8 +1,10 @@
-import { HomeBox } from './Home.styled';
+import { HomeBox, HomeTitle } from './Home.styled';
 export const Home = () => {
   return (
     <HomeBox>
-      <p>It's best app for storage your Contacts </p>
+      <HomeTitle>
+        It's best app for storage your Contacts! Let's start!
+      </HomeTitle>
     </HomeBox>
   );
 };
