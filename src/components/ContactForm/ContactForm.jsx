@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'Redux/contacts/operations';
 
 import { selectContacts } from 'Redux/contacts/selectors';
+import toast from 'react-hot-toast';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -31,7 +32,30 @@ export const ContactForm = () => {
         .map(({ name }) => name.toLocaleLowerCase())
         .some(name => name === contactName.toLocaleLowerCase())
     ) {
-      return alert(`${contactName} is already in contacts`);
+      return toast(`${contactName} is already in contacts`, {
+        duration: 4000,
+        position: 'top-center',
+
+        // Styling
+        style: {},
+        className: '',
+
+        // // Custom Icon
+        // icon: '👏',
+
+        // Change colors of success/error/loading icon
+        iconTheme: {
+          primary: '#000',
+          secondary: '#fff',
+        },
+
+        // Aria
+        ariaProps: {
+          role: 'status',
+          'aria-live': 'polite',
+        },
+      });
+      // return alert(`${contactName} is already in contacts`);
     }
     const contact = {
       contactName,
