@@ -13,6 +13,23 @@ export const fetchContacts = createAsyncThunk(
       return thunkAPI.rejectWithValue(error.message);
     }
   }
+  // {
+  //   condition: (_, { getState, extra }) => {
+  //     const contacts = getState(extra);
+  //     console.log(contacts);
+  // if (contacts.isLoading === true) {
+  //   return false;
+  // }
+
+  // const { contactList } = getState();
+  // console.log(contactList);
+  // const fetchStatus = contactList.requests[contacts];
+  // if (fetchStatus === 'fulfilled' || fetchStatus === 'loading') {
+  //   // Already fetched or in progress, don't need to re-fetch
+  //   return false;
+  // }
+  // },
+  // }
 );
 
 export const addContact = createAsyncThunk(
