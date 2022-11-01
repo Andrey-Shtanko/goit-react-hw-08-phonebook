@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.75f42f35.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.a8e36397.js",
     "static/js/550.b394c6e6.chunk.js": "/goit-react-hw-08-phonebook/static/js/550.b394c6e6.chunk.js",
     "static/js/748.a83f9723.chunk.js": "/goit-react-hw-08-phonebook/static/js/748.a83f9723.chunk.js",
     "static/js/817.0adff89d.chunk.js": "/goit-react-hw-08-phonebook/static/js/817.0adff89d.chunk.js",
@@ -9,7 +9,7 @@
     "static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.png": "/goit-react-hw-08-phonebook/static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.70eb8bbf28cb87b459f5.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.75f42f35.js.map": "/goit-react-hw-08-phonebook/static/js/main.75f42f35.js.map",
+    "main.a8e36397.js.map": "/goit-react-hw-08-phonebook/static/js/main.a8e36397.js.map",
     "550.b394c6e6.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/550.b394c6e6.chunk.js.map",
     "748.a83f9723.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/748.a83f9723.chunk.js.map",
     "817.0adff89d.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/817.0adff89d.chunk.js.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.75f42f35.js"
+    "static/js/main.a8e36397.js"
   ]
 }
