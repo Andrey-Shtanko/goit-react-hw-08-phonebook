@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/react-phonebook/static/js/main.ca584f9e.js",
+    "main.js": "/react-phonebook/static/js/main.b35ff4b1.js",
     "static/js/550.b394c6e6.chunk.js": "/react-phonebook/static/js/550.b394c6e6.chunk.js",
     "static/js/748.427cc394.chunk.js": "/react-phonebook/static/js/748.427cc394.chunk.js",
     "static/js/817.0adff89d.chunk.js": "/react-phonebook/static/js/817.0adff89d.chunk.js",
@@ -9,7 +9,7 @@
     "static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.png": "/react-phonebook/static/media/depositphotos_68233141-stock-illustration-contact-book-doodle-drawing-seamless.70eb8bbf28cb87b459f5.png",
     "index.html": "/react-phonebook/index.html",
     "main.7acaea2f.css.map": "/react-phonebook/static/css/main.7acaea2f.css.map",
-    "main.ca584f9e.js.map": "/react-phonebook/static/js/main.ca584f9e.js.map",
+    "main.b35ff4b1.js.map": "/react-phonebook/static/js/main.b35ff4b1.js.map",
     "550.b394c6e6.chunk.js.map": "/react-phonebook/static/js/550.b394c6e6.chunk.js.map",
     "748.427cc394.chunk.js.map": "/react-phonebook/static/js/748.427cc394.chunk.js.map",
     "817.0adff89d.chunk.js.map": "/react-phonebook/static/js/817.0adff89d.chunk.js.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.ca584f9e.js"
+    "static/js/main.b35ff4b1.js"
   ]
 }
